@@ -1,0 +1,126 @@
+/* Timeline container */
+.task-list {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 20px; /* Memberi jarak untuk garis timeline */
+}
+
+/* Timeline line */
+.task-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd; /* Warna garis timeline */
+}
+
+/* Timeline item */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f9f9fc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Circle indicator on the left of each task */
+.task-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+/* Adjustments for task details */
+.task-name h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.task-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.priority-badge {
+  margin-right: 8px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.priority-badge.low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority-badge.medium {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.priority-badge.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+}
+
+.status-badge.to-do {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.status-badge.in-progress {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status-badge.done {
+  background-color: #28a745;
+  color: white;
+}
+
+.task-actions .edit-btn {
+  color: #007bff;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.task-actions .delete-btn {
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+.task-actions .edit-btn i {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.task-actions .delete-btn i {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.task-actions .edit-btn i:hover,
+.task-actions .delete-btn i:hover {
+  opacity: 0.8;
+}
